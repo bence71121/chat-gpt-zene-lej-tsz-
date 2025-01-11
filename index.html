@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenelejátszó</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="player">
+    <h1>Zenelejátszó</h1>
+    <div id="song-title">BoyWithUke - Toxic</div>
 
+    <!-- Play/Pause gomb -->
+    <div class="controls">
+      <button id="play-pause">
+        <i id="play-pause-icon" class="fas fa-play"></i>
+      </button>
+    </div>
+
+    <!-- Idő kijelző -->
+    <div class="time">
+      <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+    </div>
+
+    <!-- Idő csúszka -->
+    <input type="range" id="progress" value="0" step="1" min="0" max="100">
+
+    <!-- Hangerő szabályozó -->
+    <div class="volume-control">
+      <i class="fas fa-volume-up"></i>
+      <input type="range" id="volume" value="1" step="0.01" min="0" max="1">
+      <span id="volume-percentage">100%</span>
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio" src="BoyWithUke - Toxic (Lyrics).mp3" preload="auto"></audio>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
